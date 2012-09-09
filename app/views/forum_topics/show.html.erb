@@ -14,8 +14,10 @@
     <% end %>
 
     <%= render "forum_posts/listing", :forum_posts => @forum_posts %>
-    
+
     <%= numbered_paginator(@forum_posts) %>
+
+    <%= link_to "Reply to Topic", new_forum_post_path(:topic_id => @forum_topic.id) %>
   </div>
 </div>
 
